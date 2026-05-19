@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contador</title>
+</head>
+
+<body>
+
+<h1>Bienvenido 👋</h1>
+
+<p id="contador"></p>
+
+<script>
+let veces = localStorage.getItem("visitas");
+
+if (veces === null) {
+    veces = 1;
+} else {
+    veces = Number(veces) + 1;
+}
+
+localStorage.setItem("visitas", veces);
+
+document.getElementById("contador").innerText =
+"Has entrado " + veces + " veces a esta página";
+</script>
+
+</body>
+<img src="https://i.ytimg.com/vi/7YBJAXhcCm4/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AHUCYAC0AWKAgwIABABGDAgRCh_MA8=&rs=AOn4CLBgu8T2EH90Ni5pebdeqNpwaz1nxg">
+
+</html>
